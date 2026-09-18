@@ -62,5 +62,10 @@ public class Main {
             }
         }
     }
+    public static void printDaedlinesUsingStreams(ArrayList<Task> tasks) {
+        tasks.parallelStream()
+                .filter( t -> t instanceof Deadline)
+                .forEach(System.out::println);
+    }
 
 }
